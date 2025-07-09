@@ -777,15 +777,17 @@ footer {
   bottom: 20px;
   left: 20px;
   color: #fff;
+
 }
 
 .texto-banner h1 {
-  font-size: 32px;
+  font-size: 20px;
   color: #fff;
 }
 
 .texto-banner p {
   color: #fff;
+  font-size: 12px;
 }
 
 /* Área de informações do torneio */
@@ -1081,7 +1083,9 @@ footer {
   }
 
   .imagem-banner {
-    height: 300px;
+    width: 250px;
+    height: 200px;
+    
   }
 
   .login-box {
