@@ -23,29 +23,45 @@
       <!-- End Google Tag Manager -->
 </head>
 <body>
-
+  <div class="page-wrapper">
       <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXSQ32BX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-<header class="navbar">
-  <nav class="nav-container">
-    <div class="logo">
-      <img src="img/ChatGPT Image 23 de jun. de 2025, 14_20_48 1.png" alt="Logo do site">
-    </div>
+    <header class="navbar">
+      <nav class="nav-container">
+            <div class="logo">
+              <img src="img/ChatGPT Image 23 de jun. de 2025, 14_20_48 1.png" alt="Logo do site">
+            </div>
 
-    <ul class="menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Ranking</a></li>
-      <li><a href="Campeonatos.html">Campeonatos</a></li>
-      <li><a href="Login.html">Como participar</a></li>
-    </ul>
+            <ul class="menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Ranking</a></li>
+              <li><a href="Campeonatos.html">Campeonatos</a></li>
+              <li><a href="Login.html">Como participar</a></li>
+            </ul>
 
-    <div class="auth">
-      <a href="Login.html" class="btn-auth">Entrar | Cadastrar</a>
-    </div>
-  </nav>
-</header>
+            <div class="auth">
+              <a href="Login.html" class="btn-auth">Entrar | Cadastrar</a>
+            </div>
+              <!-- Ícone do menu hambúrguer -->
+            <div class="menu-toggle" id="menu-toggle">
+              ☰
+            </div>
+          </div>
+
+          <!-- Menu Mobile (escondido inicialmente) -->
+          <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Jogos</a></li>
+            <li><a href="#">Ranking</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="login.html">Entrar / Cadastrar</a></li>
+          </ul>
+
+
+      </nav>
+    </header>
 
 <section class="hero">
   <img src="img/Street-Fighter-6-PS5-Wallpapers-011.jpg" alt="Imagem do Street Fighter 6" class="hero-img">
@@ -79,8 +95,9 @@
   </section> -->
 
     <div class="proximo"> 
-    <h1> Próximos Campeonatos</h1>
-    <a href="">ver todos</a>
+    <h1> Próximos Campeonatos</h1> <p> Ver Todos</p>
+    
+    
     </div>
       <div class="card">
             <div class="tags">
@@ -190,6 +207,16 @@
         </div>
     </footer>
 
+  </div>
+
+  <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        toggleBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("show");
+        });
+  </script>
 
 </body>
 </html>

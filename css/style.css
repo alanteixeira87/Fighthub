@@ -2,9 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1400px;
+  max-width: 1440px;
+  
 }
 
+.page-wrapper {
+  
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  position: relative;
+
+  }
 body {
   font-family: "Segoe UI", sans-serif;
   background: #050505;
@@ -20,8 +30,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-left: 15%;
+  
 }
 
 .logo img {
@@ -48,6 +58,34 @@ body {
   border-radius: 6px;
   font-weight: bold;
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menu mobile escondido por padrão */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  padding: 16px;
+  list-style: none;
+}
+
+.mobile-menu li {
+  margin: 8px 0;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
 
 .hero {
   width: 1440px;
@@ -121,10 +159,12 @@ body {
   margin-left: 30px;
 }
 
-.proximo a {
-  text-align: end;
-  margin-left: 90%;
+.proximo p {
+  text-align: center;
+  justify-content: flex-end;
+  margin-left:88%;
   text-decoration: none;
+  color:  #7a00e6;
 }
 
 .card {
@@ -882,3 +922,263 @@ footer {
   margin-top: 10px;
   padding-bottom: 10px;
 }
+
+
+
+/* =============== RESPONSIVO =============== */
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+}
+
+@media (max-width: 720px) {
+  .nav-container {
+    margin-left: 5%;
+  }
+
+  .hero {
+    flex-direction:row;
+    max-width: 710px;
+    max-height: 250px;
+    text-align: center;
+    
+  }
+
+  .hero-content {
+    object-fit: fill
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .carousel img {
+    width: 120px;
+  }
+
+  .card {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .filtros {
+    width: 90%;
+    margin: 0 auto 32px;
+  }
+
+  .jogos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .jogo-card {
+    width: 150px;
+    height: 250px;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .cta-images {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .botao-inscricao {
+    margin-left: 0;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .hero {
+    padding: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .carousel img {
+    width: 100px;
+  }
+  .proximo {
+    max-width: 750px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:80px
+    
+  }
+  .proximo p{ 
+    font-size: 12px;
+    padding-left: 60px;
+    padding-bottom: 5px;
+    color: #7a00e6;
+    
+  }
+
+  .proximo h1 {
+    font-size: 20px;
+  }
+  .card {
+    width: 90%;
+    margin: 16px auto;
+    margin-left: 25px;
+  }
+  
+
+  .small-games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-content h2 {
+    font-size: 24px;
+  }
+  .cta-content p {
+    padding-left: 4px;
+    font-size: 12px;
+    align-items: center;
+
+  }
+
+  .jogos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jogo-card {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .imagem-banner {
+    height: 300px;
+  }
+
+  .login-box {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .filtros {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .botao-inscricao {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .card-body h3 {
+    font-size: 16px;
+  }
+
+  .footer-links,
+  .footer-social {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .jogo-card {
+    width: 150px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .jogos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-images img {
+    height: 150px;
+  }
+
+  .imagem-banner {
+    height: 100px;
+  }
+
+  .live-details h2 {
+    font-size: 22px;
+  }
+
+  .descricao {
+    font-size: 14px;
+  }
+}
+
+.live-banner {
+  padding: 2px;
+}
+
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .menu,
+  .auth {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
+}
+
+

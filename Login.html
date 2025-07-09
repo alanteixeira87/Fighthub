@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fighthub</title>
     <link rel="stylesheet" href="css/style.css" />
-        <!-- Google tag (gtag.js) -->
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4XRMEP89T"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-Z4XRMEP89T');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Z4XRMEP89T");
     </script>
   </head>
   <body>
     <header class="navbar">
       <nav class="nav-container">
         <div class="logo">
-          <img
-            src="img/ChatGPT Image 23 de jun. de 2025, 14_20_48 1.png"
-            alt="Logo do site"
-          />
+          <a href="index.html">
+            <img
+              src="img/ChatGPT Image 23 de jun. de 2025, 14_20_48 1.png"
+              alt="Logo do site"
+            />
+          </a>
         </div>
 
         <ul class="menu">
@@ -33,133 +37,139 @@
         </ul>
 
         <div class="auth">
-          <a href="#" class="btn-auth">Entrar | Cadastrar</a>
+          <a href="login.html" class="btn-auth">Entrar | Cadastrar</a>
         </div>
+
+        <!-- Ícone do menu hambúrguer -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
       </nav>
+
+      <!-- Menu Mobile -->
+      <ul class="mobile-menu" id="mobile-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#">Jogos</a></li>
+        <li><a href="#">Ranking</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="login.html">Entrar / Cadastrar</a></li>
+      </ul>
     </header>
 
-        <div class="login"> 
-            <div class="login-box">
-                <h2>Cadastro <span class="highlight">FightHub</span></h2>
-                <p>Entre e jogue com milhares de jogadores.</p>
-                
-            <form>
-                <!-- Dados Pessoais -->
-                <input type="text" placeholder="Nome completo" required />
-                <input type="text" placeholder="Username" required />
+    <div class="login">
+      <div class="login-box">
+        <h2>Cadastro <span class="highlight">FightHub</span></h2>
+        <p>Entre e jogue com milhares de jogadores.</p>
 
-                <!-- Contato -->
-                <input type="email" placeholder="Email" required />
-                <input type="tel" placeholder="Telefone com DDD" required />
+        <form>
+          <input type="text" placeholder="Nome completo" required />
+          <input type="text" placeholder="Username" required />
 
-                <!-- Senha -->
-                <input type="password" placeholder="Password" required />
+          <input type="email" placeholder="Email" required />
+          <input type="tel" placeholder="Telefone com DDD" required />
 
-                <!-- Perfil -->
-                <select id="perfil" required>
-                    <option value="">Selecione seu perfil</option>
-                    <option value="jogador">Jogador</option>
-                    <option value="equipe">Equipe</option>
-                    <option value="organizador">Organizador</option>
-                </select>
+          <input type="password" placeholder="Password" required />
 
-                <!-- Documento -->
-                <div id="documentos" style="display:none;">
-                    <input type="text" id="cpf" placeholder="CPF" />
-                    <input type="text" id="cnpj" placeholder="CNPJ" />
-                </div>
+          <select id="perfil" required>
+            <option value="">Selecione seu perfil</option>
+            <option value="jogador">Jogador</option>
+            <option value="equipe">Equipe</option>
+            <option value="organizador">Organizador</option>
+          </select>
 
-                <!-- Nascimento -->
-                <input type="date" id="nascimento" required />
+          <div id="documentos" style="display: none;">
+            <input type="text" id="cpf" placeholder="CPF" />
+            <input type="text" id="cnpj" placeholder="CNPJ" />
+          </div>
 
-                <!-- Dados do Responsável -->
-                <div id="responsavel-fields" style="display:none;">
-                    <input type="text" placeholder="Nome do responsável" />
-                    <input type="text" placeholder="CPF do responsável" />
-                </div>
+          <input type="date" id="nascimento" required />
 
-                <!-- País -->
-                <select required>
-                    <option value="">Selecione o país</option>
-                    <option value="BR">Brasil</option>
-                    <option value="US">Estados Unidos</option>
-                    <option value="PT">Portugal</option>
-                    <option value="AR">Argentina</option>
-                    <option value="FR">França</option>
-                </select>
+          <div id="responsavel-fields" style="display: none;">
+            <input type="text" placeholder="Nome do responsável" />
+            <input type="text" placeholder="CPF do responsável" />
+          </div>
 
-                <!-- Endereço -->
-                <input type="text" placeholder="Endereço" required />
-                <input type="text" placeholder="Número" required />
-                <input type="text" placeholder="Complemento (opcional)" />
+          <select required>
+            <option value="">Selecione o país</option>
+            <option value="BR">Brasil</option>
+            <option value="US">Estados Unidos</option>
+            <option value="PT">Portugal</option>
+            <option value="AR">Argentina</option>
+            <option value="FR">França</option>
+          </select>
 
-            
+          <input type="text" placeholder="Endereço" required />
+          <input type="text" placeholder="Número" required />
+          <input type="text" placeholder="Complemento (opcional)" />
 
-                <!-- Botão -->
-                <button type="submit" class="btn-login">Criar conta</button>
-                </form>
+          <button type="submit" class="btn-login">Criar conta</button>
+        </form>
 
-                <p class="account-msg">
-                Você já possui uma conta? <a href="Entrar.html">Entrar</a>
-                </p>
-        </div>
+        <p class="account-msg">
+          Você já possui uma conta? <a href="Entrar.html">Entrar</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Script para toggle do menu mobile -->
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      toggleBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("show");
+      });
+    </script>
+
+    <!-- Script para exibir campos conforme perfil/idade -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const perfilSelect = document.getElementById("perfil");
+        const nascimentoInput = document.getElementById("nascimento");
+
+        const documentosDiv = document.getElementById("documentos");
+        const cpfInput = document.getElementById("cpf");
+        const cnpjInput = document.getElementById("cnpj");
+        const responsavelDiv = document.getElementById("responsavel-fields");
+
+        function calcularIdade(dataNasc) {
+          const hoje = new Date();
+          const nascimento = new Date(dataNasc);
+          let idade = hoje.getFullYear() - nascimento.getFullYear();
+          const m = hoje.getMonth() - nascimento.getMonth();
+          if (m < 0 || (m === 0 && hoje.getDate() < nascimento.getDate())) {
+            idade--;
+          }
+          return idade;
+        }
+
+        function atualizarCampos() {
+          const perfil = perfilSelect.value;
+          const idade = nascimentoInput.value
+            ? calcularIdade(nascimentoInput.value)
+            : null;
+
+          documentosDiv.style.display = "none";
+          cpfInput.style.display = "none";
+          cnpjInput.style.display = "none";
+          responsavelDiv.style.display = "none";
+
+          if (perfil === "jogador") {
+            documentosDiv.style.display = "block";
+            cpfInput.style.display = "block";
+
+            if (idade !== null && idade < 18) {
+              responsavelDiv.style.display = "block";
+            }
+          } else if (perfil === "equipe" || perfil === "organizador") {
+            documentosDiv.style.display = "block";
+            cpfInput.style.display = "block";
+            cnpjInput.style.display = "block";
+            responsavelDiv.style.display = "block";
+          }
+        }
+
+        perfilSelect.addEventListener("change", atualizarCampos);
+        nascimentoInput.addEventListener("change", atualizarCampos);
+      });
+    </script>
   </body>
 </html>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const perfilSelect = document.getElementById("perfil");
-  const nascimentoInput = document.getElementById("nascimento");
-
-  const documentosDiv = document.getElementById("documentos");
-  const cpfInput = document.getElementById("cpf");
-  const cnpjInput = document.getElementById("cnpj");
-  const responsavelDiv = document.getElementById("responsavel-fields");
-
-  // Calcula a idade baseada na data de nascimento
-  function calcularIdade(dataNasc) {
-    const hoje = new Date();
-    const nascimento = new Date(dataNasc);
-    let idade = hoje.getFullYear() - nascimento.getFullYear();
-    const m = hoje.getMonth() - nascimento.getMonth();
-    if (m < 0 || (m === 0 && hoje.getDate() < nascimento.getDate())) {
-      idade--;
-    }
-    return idade;
-  }
-
-  // Atualiza os campos conforme o perfil e idade
-  function atualizarCampos() {
-    const perfil = perfilSelect.value;
-    const idade = nascimentoInput.value ? calcularIdade(nascimentoInput.value) : null;
-
-    // Esconde tudo por padrão
-    documentosDiv.style.display = "none";
-    cpfInput.style.display = "none";
-    cnpjInput.style.display = "none";
-    responsavelDiv.style.display = "none";
-
-    if (perfil === "jogador") {
-      documentosDiv.style.display = "block";
-      cpfInput.style.display = "block";
-
-      if (idade !== null && idade < 18) {
-        responsavelDiv.style.display = "block";
-      }
-
-    } else if (perfil === "equipe" || perfil === "organizador") {
-      documentosDiv.style.display = "block";
-      cpfInput.style.display = "block";
-      cnpjInput.style.display = "block";
-      responsavelDiv.style.display = "block";
-    }
-  }
-
-  // Executa quando troca o perfil ou a data de nascimento
-  perfilSelect.addEventListener("change", atualizarCampos);
-  nascimentoInput.addEventListener("change", atualizarCampos);
-
-});
-</script>

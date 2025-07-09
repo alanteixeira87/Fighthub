@@ -32,7 +32,21 @@
     <div class="auth">
       <a href="Login.html" class="btn-auth">Entrar | Cadastrar</a>
     </div>
+
+    <!-- Ícone do menu hambúrguer -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
   </nav>
+
+  <!-- Menu Mobile (escondido inicialmente) -->
+  <ul class="mobile-menu" id="mobile-menu">
+    <li><a href="#">Início</a></li>
+    <li><a href="#">Jogos</a></li>
+    <li><a href="#">Ranking</a></li>
+    <li><a href="#">Contato</a></li>
+    <li><a href="login.html">Entrar / Cadastrar</a></li>
+  </ul>
 </header>
   <section class="filtros">
              <input type="text" placeholder="Buscar campeonatos..." />
@@ -120,7 +134,7 @@
 
         <div class="live"></div>
 
-           </div>
+           
              <section class="campeonato-ao-vivo">
                     
         <div class="live-banner">
@@ -234,6 +248,15 @@
 
 
     </main>
+         <script>
+              const toggleBtn = document.getElementById("menu-toggle");
+              const mobileMenu = document.getElementById("mobile-menu");
+
+              toggleBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("show");
+              });
+          </script>
+        <script src="navbar.js"></script>
         
 </body>
 </html>

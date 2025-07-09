@@ -6,25 +6,27 @@
     <title>Fighthub</title>
     <link rel="stylesheet" href="css/style.css" />
 
-    
-        <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4XRMEP89T"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-Z4XRMEP89T');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Z4XRMEP89T");
     </script>
   </head>
   <body>
     <header class="navbar">
       <nav class="nav-container">
         <div class="logo">
-          <img
-            src="img/ChatGPT Image 23 de jun. de 2025, 14_20_48 1.png"
-            alt="Logo do site"
-          />
+          <a href="index.html">
+            <img
+              src="img/ChatGPT Image 23 de jun. de 2025, 14_20_48 1.png"
+              alt="Logo do site"
+            />
+          </a>
         </div>
 
         <ul class="menu">
@@ -35,28 +37,49 @@
         </ul>
 
         <div class="auth">
-          <a href="#" class="btn-auth">Entrar | Cadastrar</a>
+          <a href="login.html" class="btn-auth">Entrar | Cadastrar</a>
         </div>
+
+        <!-- Ícone do menu hambúrguer -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
       </nav>
+
+      <!-- Menu Mobile -->
+      <ul class="mobile-menu" id="mobile-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#">Jogos</a></li>
+        <li><a href="#">Ranking</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="login.html">Entrar / Cadastrar</a></li>
+      </ul>
     </header>
 
-       <div class="login"> 
-            <div class="login-box">
-                <h2>Esqueceu a senha <span class="highlight">FightHub</span></h2>
-                <p>Por favor, digite seu e-mail para recuperar sua senha</p>
-                
-                <form id="form-recuperar">
-                    <input type="text" id="email-usuario" placeholder="E-mail ou nome de usuário" required>
-                    <button type="submit" class="btn-login">Enviar</button>
-                </form>
+    <div class="login">
+      <div class="login-box">
+        <h2>Esqueceu a senha <span class="highlight">FightHub</span></h2>
+        <p>Por favor, digite seu e-mail para recuperar sua senha</p>
 
-              
-            </div>
-        </div>
+        <form id="form-recuperar">
+          <input
+            type="text"
+            id="email-usuario"
+            placeholder="E-mail ou nome de usuário"
+            required
+          />
+          <button type="submit" class="btn-login">Enviar</button>
+        </form>
+      </div>
+    </div>
 
-           
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-   </body>
+      toggleBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("show");
+      });
+    </script>
+  </body>
 </html>
 
 
