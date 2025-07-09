@@ -1163,24 +1163,3 @@ footer {
 }
 
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  .menu,
-  .auth {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .mobile-menu.show {
-    display: flex;
-  }
-
-  .nav-container {
-    justify-content: space-between;
-  }
-}
-
-
