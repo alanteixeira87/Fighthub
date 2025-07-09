@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="navbar">
+  <nav class="nav-container">
+    <div class="logo">
+      <img src="img/ChatGPT Image 23 de jun. de 2025, 14_20_48 1.png" alt="Logo do site">
+    </div>
+
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Ranking</a></li>
+      <li><a href="#">Campeonatos</a></li>
+      <li><a href="#">Como participar</a></li>
+    </ul>
+
+    <div class="auth">
+      <a href="Login.html" class="btn-auth">Entrar | Cadastrar</a>
+    </div>
+  </nav>
+</header>
+  <section class="filtros">
+             <input type="text" placeholder="Buscar campeonatos..." />
+             <select><option>Todos os jogos</option>
+                <option value="street-fighter">Street Fighter VI</option>
+                <option value="mortal-kombat">Mortal Kombat 1</option>
+                <option value="tekken">Tekken 8</option>
+                <option value="guilty-gear">Guilty Gear Strive</option>
+
+        
+              </select>
+             <select><option>Todos os tipos</option>
+                <option value="individual">Individual</option>
+                <option value="equipe">Equipe</option>
+             </select>
+             <select><option>Todos os status</option>
+                <option value="aberto">Aberto</option>
+                <option value="fechado">Fechado</option>
+                <option value="em-andamento">Em andamento</option>
+                <option value="finalizado">Finalizado</option>
+             </select>
+             <button>Filtrar</button>
+         </section>
+
+            <main class="campeonatos">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="tags">
+            <span class="tag aberto">Aberto</span>
+            <span class="tag individual">Individual</span>
+            <span class="tag pago">R$ 50</span>
+            </div>
+            <img src="img/Street Fighter 6.png" alt="Street Fighter VI" />
+            <div class="card-body">
+            <h3>Street Fighter VI Pro Cup</h3>
+            <p><i class="fa-regular fa-calendar"></i> 14/06/2023</p>
+            <p><i class="fa-regular fa-clock"></i> 18:00</p>
+            <p><i class="fa-solid fa-user-group"></i> 42 / 64 participantes</p>
+            <div class="card-footer">
+                <span class="inscricao">Inscrições abertas</span>
+                <a href="Detalhes.html" class="btn-inscricao">Ver detalhes</a>
+            </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="tags">
+            <span class="tag aberto">Aberto</span>
+            <span class="tag equipe">Equipe</span>
+            <span class="tag gratuito">Gratuito</span>
+            </div>
+            <img src="img/egs-mortalkombat1defintiveedition-netherrealmstudiosqloc-editions-g1a-00-1920x1080-4de805dffaf7.jpg" alt="Mortal Kombat 1" />
+            <div class="card-body">
+            <h3>Mortal Kombat 1 Masters</h3>
+            <p><i class="fa-regular fa-calendar"></i> 20/07/2023</p>
+            <p><i class="fa-regular fa-clock"></i> 16:00</p>
+            <p><i class="fa-solid fa-user-group"></i> 30 / 32 participantes</p>
+            <div class="card-footer">
+                <span class="inscricao">Inscrições abertas</span>
+                <a href="Detalhes.html" class="btn-inscricao">Ver detalhes</a>
+            </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="tags">
+            <span class="tag fechado">Fechado</span>
+            <span class="tag individual">Individual</span>
+            <span class="tag pago">R$ 30</span>
+            </div>
+            <img class="imgcard" src="img/tekkenn.jfif" alt="Tekken 8" />
+            <div class="card-body">
+            <h3>Tekken 8 Challenge</h3>
+            <p><i class="fa-regular fa-calendar"></i> 01/07/2023</p>
+            <p><i class="fa-regular fa-clock"></i> 20:00</p>
+            <p><i class="fa-solid fa-user-group"></i> 64 / 64 participantes</p>
+            <div class="card-footer">
+                <span class="inscricao">Inscrições encerradas</span>
+                <a href="Detalhes.html" class="btn-inscricao">Ver detalhes</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="live"></div>
+
+           </div>
+             <section class="campeonato-ao-vivo">
+                    
+        <div class="live-banner">
+            <span class="live-label">🟢 AO VIVO</span>
+            <img src="img/fdasdfsd.png"Banner Campeonato Ao Vivo">
+        </div>
+
+        <div class="live-details">
+            <h2>Final - Tekken 8 World Cup</h2>
+            <p class="descricao">
+            A grande final da Tekken 8 World Cup está acontecendo agora! Os melhores jogadores do mundo se enfrentam em batalhas eletrizantes ao vivo.
+            </p>
+
+            <div class="info-grid">
+            <div class="info-box">
+                <h4>👥 Participantes</h4>
+                <ul>
+                <li>PlayerOne</li>
+                <li>FuryMaster</li>
+                <li>ComboKing</li>
+                <li>Kazuma</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>🏆 Premiação</h4>
+                <p>R$ 10.000,00 em dinheiro</p>
+                <p>+ Troféu exclusivo do torneio</p>
+            </div>
+
+            <div class="info-box">
+                <h4>🎮 Organizador</h4>
+                <p>FightChamp Pro League</p>
+                <p>Email: contato@fightchamp.gg</p>
+            </div>
+            </div>
+
+            <div class="live-actions">
+            <button>Assistir ao vivo</button>
+            <button class="secundario">Ver mais detalhes</button>
+            </div>
+        </div>
+        </section>
+
+      <section class="selecao-jogos">
+        <div class="jogos-header">
+            <h2>Todos os jogos</h2>
+            <a href="#" class="ver-todos">Ver todos</a>
+        </div>
+
+        <div class="jogos-grid">
+            <!-- Card 1 -->
+            <div class="jogo-card" onclick="selecionarJogo('street-fighter')">
+            <img src="img/Street-Fighter-6-PS5-Wallpapers-01.jpg" />
+            
+            </div>
+
+            <!-- Card 2 -->
+            <div class="jogo-card" onclick="selecionarJogo('mortal-kombat')">
+            <img src="img/Mortal_Kombat_1_PS5_capa_digital.png" alt="Mortal Kombat 1" />
+            
+            </div>
+
+            <!-- Card 3 -->
+            <div class="jogo-card" onclick="selecionarJogo('tekken-8')">
+            <img src="img/tekken-8-top-bm-710x399.jpg" alt="Tekken 8" />
+           
+            </div>
+
+            <!-- Card 4 -->
+            <div class="jogo-card" onclick="selecionarJogo('guilty-gear')">
+            <img src="/img/fatalfury.jpg" alt="Guilty Gear Strive" />
+            
+            </div>
+        </div>
+      </section>
+
+         <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+            <img src="img/Logo.png" alt="Logo Fighthub" />
+            <p>Conectando jogadores aos maiores torneios online.</p>
+            </div>
+
+            <div class="footer-links">
+            <h4>Links</h4>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Ranking</a></li>
+                <li><a href="#">Torneios</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-social">
+            <h4>Siga-nos</h4>
+            <div class="social-icons">
+                <a href="#"><img src="img/x.svg" alt="X"></a>
+                <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="img/youtube.svg" alt="YouTube"></a>
+                <a href="#"><img src="img/twitch.svg" alt="Twitch"></a>
+            </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Fighthub. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+
+    </main>
+        
+</body>
+</html>

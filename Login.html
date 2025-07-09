@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Hub</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <nav class="nav-container">
+        <div class="logo">
+          <img
+            src="img/ChatGPT Image 23 de jun. de 2025, 14_20_48 1.png"
+            alt="Logo do site"
+          />
+        </div>
+
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Ranking</a></li>
+          <li><a href="Campeonatos.html">Campeonatos</a></li>
+          <li><a href="Login.html">Como participar</a></li>
+        </ul>
+
+        <div class="auth">
+          <a href="#" class="btn-auth">Entrar | Cadastrar</a>
+        </div>
+      </nav>
+    </header>
+
+        <div class="login"> 
+            <div class="login-box">
+                <h2>Cadastro <span class="highlight">FightHub</span></h2>
+                <p>Entre e jogue com milhares de jogadores.</p>
+                
+            <form>
+                <!-- Dados Pessoais -->
+                <input type="text" placeholder="Nome completo" required />
+                <input type="text" placeholder="Username" required />
+
+                <!-- Contato -->
+                <input type="email" placeholder="Email" required />
+                <input type="tel" placeholder="Telefone com DDD" required />
+
+                <!-- Senha -->
+                <input type="password" placeholder="Password" required />
+
+                <!-- Perfil -->
+                <select id="perfil" required>
+                    <option value="">Selecione seu perfil</option>
+                    <option value="jogador">Jogador</option>
+                    <option value="equipe">Equipe</option>
+                    <option value="organizador">Organizador</option>
+                </select>
+
+                <!-- Documento -->
+                <div id="documentos" style="display:none;">
+                    <input type="text" id="cpf" placeholder="CPF" />
+                    <input type="text" id="cnpj" placeholder="CNPJ" />
+                </div>
+
+                <!-- Nascimento -->
+                <input type="date" id="nascimento" required />
+
+                <!-- Dados do Responsável -->
+                <div id="responsavel-fields" style="display:none;">
+                    <input type="text" placeholder="Nome do responsável" />
+                    <input type="text" placeholder="CPF do responsável" />
+                </div>
+
+                <!-- País -->
+                <select required>
+                    <option value="">Selecione o país</option>
+                    <option value="BR">Brasil</option>
+                    <option value="US">Estados Unidos</option>
+                    <option value="PT">Portugal</option>
+                    <option value="AR">Argentina</option>
+                    <option value="FR">França</option>
+                </select>
+
+                <!-- Endereço -->
+                <input type="text" placeholder="Endereço" required />
+                <input type="text" placeholder="Número" required />
+                <input type="text" placeholder="Complemento (opcional)" />
+
+            
+
+                <!-- Botão -->
+                <button type="submit" class="btn-login">Criar conta</button>
+                </form>
+
+                <p class="account-msg">
+                Você já possui uma conta? <a href="Entrar.html">Entrar</a>
+                </p>
+        </div>
+  </body>
+</html>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const perfilSelect = document.getElementById("perfil");
+  const nascimentoInput = document.getElementById("nascimento");
+
+  const documentosDiv = document.getElementById("documentos");
+  const cpfInput = document.getElementById("cpf");
+  const cnpjInput = document.getElementById("cnpj");
+  const responsavelDiv = document.getElementById("responsavel-fields");
+
+  // Calcula a idade baseada na data de nascimento
+  function calcularIdade(dataNasc) {
+    const hoje = new Date();
+    const nascimento = new Date(dataNasc);
+    let idade = hoje.getFullYear() - nascimento.getFullYear();
+    const m = hoje.getMonth() - nascimento.getMonth();
+    if (m < 0 || (m === 0 && hoje.getDate() < nascimento.getDate())) {
+      idade--;
+    }
+    return idade;
+  }
+
+  // Atualiza os campos conforme o perfil e idade
+  function atualizarCampos() {
+    const perfil = perfilSelect.value;
+    const idade = nascimentoInput.value ? calcularIdade(nascimentoInput.value) : null;
+
+    // Esconde tudo por padrão
+    documentosDiv.style.display = "none";
+    cpfInput.style.display = "none";
+    cnpjInput.style.display = "none";
+    responsavelDiv.style.display = "none";
+
+    if (perfil === "jogador") {
+      documentosDiv.style.display = "block";
+      cpfInput.style.display = "block";
+
+      if (idade !== null && idade < 18) {
+        responsavelDiv.style.display = "block";
+      }
+
+    } else if (perfil === "equipe" || perfil === "organizador") {
+      documentosDiv.style.display = "block";
+      cpfInput.style.display = "block";
+      cnpjInput.style.display = "block";
+      responsavelDiv.style.display = "block";
+    }
+  }
+
+  // Executa quando troca o perfil ou a data de nascimento
+  perfilSelect.addEventListener("change", atualizarCampos);
+  nascimentoInput.addEventListener("change", atualizarCampos);
+
+});
+</script>
