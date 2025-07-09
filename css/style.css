@@ -1182,3 +1182,124 @@ footer {
 }
 
 
+@media (max-width: 480px) {
+  .hero {
+    padding: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .card-body h3 {
+    font-size: 16px;
+  }
+
+  .footer-links,
+  .footer-social {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .jogo-card {
+    width: 150px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .jogos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-images img {
+    height: 150px;
+  }
+
+  .imagem-banner {
+    height: 100px;
+  }
+
+  .live-details h2 {
+    font-size: 22px;
+  }
+
+  .descricao {
+    font-size: 14px;
+  }
+}
+
+.live-banner {
+  padding: 2px;
+}
+
+
+
+
+
+@media (max-width: 580px) {
+  .hero {
+    padding: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .card-body h3 {
+    font-size: 16px;
+  }
+
+  .footer-links,
+  .footer-social {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .jogo-card {
+    width: 150px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .jogos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-images img {
+    height: 150px;
+  }
+
+  .imagem-banner {
+    height: 100px;
+  }
+
+  .live-details h2 {
+    font-size: 22px;
+  }
+
+  .descricao {
+    font-size: 14px;
+  }
+}
+
+.live-banner {
+  padding: 2px;
+}
+
+
