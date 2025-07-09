@@ -1243,63 +1243,49 @@ footer {
 
 
 
-
-@media (max-width: 580px) {
+@media (max-width: 480px) {
   .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 16px;
+    height: auto;
   }
 
   .hero-content h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .hero-content p {
     font-size: 14px;
   }
 
-  .card-body h3 {
-    font-size: 16px;
+  .carousel img {
+    width: 80px;
   }
 
-  .footer-links,
-  .footer-social {
-    width: 100%;
-    text-align: center;
+  .card {
+    width: 90%;
+    margin: 12px auto;
   }
 
-  .footer-logo {
-    text-align: center;
+  .cta {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
   }
 
-  .jogo-card {
-    width: 150px;
-    height: 250px;
-    margin: 0 auto;
-  }
-
-  .jogos-grid {
+  .cta-images {
     grid-template-columns: 1fr;
-  }
-
-  .cta-images img {
-    height: 150px;
+    width: 100%;
   }
 
   .imagem-banner {
-    height: 100px;
+    height: 150px;
   }
 
-  .live-details h2 {
-    font-size: 22px;
-  }
-
-  .descricao {
-    font-size: 14px;
+  .botao-inscricao {
+    margin: 0 auto;
+    display: block;
   }
 }
-
-.live-banner {
-  padding: 2px;
-}
-
-
