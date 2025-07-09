@@ -1290,20 +1290,3 @@ footer {
   }
 }
 
-
-/* Responsividade para dispositivos com problemas de exibição */
-@media (max-width: 768px) {
-  .imagem-banner {
-    height: auto;
-    max-height: 60vh;
-    object-fit: cover;
-  }
-
-  .texto-banner h1 {
-    font-size: 1.5rem;
-  }
-
-  .texto-banner p {
-    font-size: 1rem;
-  }
-}
