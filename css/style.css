@@ -1291,18 +1291,19 @@ footer {
 }
 
 
-@media (max-width: 480px) {
-  .hero {
-    flex-direction: column;
-    padding: 16px;
+/* Responsividade para dispositivos com problemas de exibição */
+@media (max-width: 768px) {
+  .imagem-banner {
     height: auto;
+    max-height: 60vh;
+    object-fit: cover;
   }
 
-  .hero-content h1 {
-    font-size: 22px;
+  .texto-banner h1 {
+    font-size: 1.5rem;
   }
 
-  .hero-content p {
-    font-size: 14px;
+  .texto-banner p {
+    font-size: 1rem;
   }
 }
