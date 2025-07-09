@@ -1294,8 +1294,8 @@ footer {
 /* Responsividade para dispositivos com problemas de exibição */
 @media (max-width: 768px) {
   .imagem-banner {
-    height: auto;
-    max-height: 50%;
+    height: 200px;
+    max-height: 450%;
     object-fit: cover;
   }
 
