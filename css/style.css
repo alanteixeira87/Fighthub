@@ -1289,3 +1289,63 @@ footer {
     display: block;
   }
 }
+
+
+@media (max-width: 430px) {
+  .hero {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 12px auto;
+  }
+
+  .carousel img {
+    width: 80px;
+  }
+
+  .jogos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jogo-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .filtros {
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .cta {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .cta-images img {
+    height: 120px;
+  }
+
+  .imagem-banner {
+    height: 160px;
+  }
+
+  .botao-inscricao {
+    margin: 0 auto;
+  }
+}
