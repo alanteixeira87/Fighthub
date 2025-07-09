@@ -1295,7 +1295,7 @@ footer {
 @media (max-width: 768px) {
   .imagem-banner {
     height: 200px;
-    max-height: 450%;
+    max-height: 450px;
     object-fit: cover;
   }
 
